@@ -1,0 +1,347 @@
+/* ====== GLOBAL STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #fff;
+  background-color: #111;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: #000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f4b400;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  margin: 0 18px;
+  font-size: 1rem;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f4b400;
+}
+
+/* ====== MENU TOGGLE ====== */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #000;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  background: url("https://media.istockphoto.com/id/2150090003/photo/large-mid-century-styled-restaurant-bar-with-tables-and-chairs-stools-benches-ceiling.jpg?s=1024x1024&w=is&k=20&c=_b66adYEU0sLK4xkMw5f8jPrcsW6Sz3ThGnmyo9t0y0=") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #f4b400;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn, .btn-outline {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn {
+  background: #f4b400;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-outline {
+  border: 2px solid #f4b400;
+  color: #f4b400;
+}
+
+.btn-outline:hover {
+  background: #f4b400;
+  color: #000;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+h2 {
+  color: #f4b400;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ====== ABOUT PREVIEW ====== */
+.about-preview p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* ===== MENU PAGE STYLES ===== */
+
+.menu-page {
+  padding: 100px 10% 80px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.menu-page h1 {
+  font-size: 2.5rem;
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.menu-page h1 span {
+  color: #fff;
+}
+
+
+.menu-page h1 span {
+  color: #fff;
+}
+.menu-page .intro-text {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.menu-category {
+  margin-bottom: 60px;
+}
+
+.menu-category h2 {
+  color: #f4b400;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f4b400;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.menu-card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.menu-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.menu-info h3 {
+  color: #f4b400;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.menu-info p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.menu-info span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-page {
+    padding: 80px 5%;
+  }
+
+  .menu-card img {
+    height: 180px;
+  }
+}
+
+
+/* ====== RESERVATION FORM ====== */
+.reservation {
+  background: url("../images/interior.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.reservation::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.reservation h2, .reservation p, .reservation form {
+  position: relative;
+  z-index: 2;
+}
+
+.reservation form {
+  max-width: 700px;
+  margin: 40px auto 0;
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+button.btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #222;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste Heaven | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span>Taste Heven</span></h1>
+      <p>Where every meal is a taste of paradise.</p>
+      <a href="#reservation" class="btn">Book a Table</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT PREVIEW ===== -->
+  <section class="about-preview">
+    <h2>Discover Our Story</h2>
+    <p>At Taste Heven, we believe in serving happiness on a plate. Enjoy fresh ingredients, cozy ambiance, and unforgettable flavors.</p>
+    <a href="about.html" class="btn-outline">Learn More</a>
+  </section>
+
+  <!-- ===== MENU PREVIEW ===== -->
+  <section class="menu-preview">
+    <h2>Our Signature Dishes</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="images/dish1.jpg" class="img" alt="Spicy Pasta">
+        <h3>Spicy Pasta</h3>
+        <p>Rich, creamy, and bursting with flavor.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/dish2.jpg" alt="Grilled Chicken">
+        <h3>Grilled Chicken</h3>
+        <p>Juicy perfection with a smoky aroma.</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/dish3.jpg" alt="Seafood Platter">
+        <h3>Seafood Platter</h3>
+        <p>Fresh catch served heavenly.</p>
+      </div>
+    </div>
+    <a href="menu.html" class="btn-outline">See Full Menu</a>
+  </section>
+
+  <!-- ===== RESERVATION FORM ===== -->
+  <section id="reservation" class="reservation">
+    <h2>Book a Table</h2>
+    <p>Reserve your dining experience today — we’ll confirm instantly via WhatsApp or email.</p>
+
+    <form id="bookingForm">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="number" id="guests" placeholder="Number of Guests" min="1" required>
+      </div>
+      <div class="form-group">
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+      </div>
+      <div class="form-group">
+        <select id="contactMethod" required>
+          <option value="">Preferred Contact</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="email">Email</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Taste Heven | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
