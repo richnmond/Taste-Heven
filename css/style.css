@@ -96,7 +96,7 @@ img {
 
 /* ====== HERO SECTION ====== */
 .hero {
-  background: url("https://media.istockphoto.com/id/2150090003/photo/large-mid-century-styled-restaurant-bar-with-tables-and-chairs-stools-benches-ceiling.jpg?s=1024x1024&w=is&k=20&c=_b66adYEU0sLK4xkMw5f8jPrcsW6Sz3ThGnmyo9t0y0=") center/cover no-repeat;
+  background: url("https://i.pinimg.com/1200x/17/e4/3b/17e43bb5fdac42256f15b9c20cd0232e.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@ img {
 }
 
 .btn, .btn-outline {
-  padding: 12px 25px;
+  padding: 10px 20px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -215,7 +215,18 @@ h2 {
 
 .menu-category {
   margin-bottom: 60px;
+ 
 }
+ .buy button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f4b400;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+      
+  }
 
 .menu-category h2 {
   color: #f4b400;
@@ -225,6 +236,7 @@ h2 {
   display: inline-block;
   padding-bottom: 5px;
 }
+
 
 .menu-grid {
   display: grid;
