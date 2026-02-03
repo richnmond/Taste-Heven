@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taste Heaven | Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body class="page-admin">
+  <header class="navbar">
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+  </header>
+
+  <main class="admin-page">
+    <section class="admin-login" id="adminLogin">
+      <div class="admin-card">
+        <h1>Admin Login</h1>
+        <p>Sign in to manage orders and approvals.</p>
+        <form id="adminLoginForm">
+          <label>
+            Email
+            <input type="email" id="adminEmail" placeholder="admin@tasteheaven.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="adminPassword" placeholder="********" required />
+          </label>
+          <button class="btn" type="submit">Sign In</button>
+        </form>
+        <p class="admin-hint">Admin accounts are created from the server seed script.</p>
+      </div>
+    </section>
+
+    <section class="admin-dashboard hidden" id="adminDashboard">
+      <div class="admin-header">
+        <div>
+          <h2>Orders</h2>
+          <p>Approve or reject incoming orders.</p>
+        </div>
+        <div class="admin-actions">
+          <button class="btn-outline" id="refreshOrders">Refresh</button>
+          <button class="btn" id="logoutAdmin">Logout</button>
+        </div>
+      </div>
+
+      <div class="order-list" id="orderList"></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taste Heaven | Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/auth.js"></script>
+</head>
+<body class="page-auth">
+  <header class="navbar">
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="login.html" class="active">Login</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <div class="auth-tabs">
+        <button class="tab active" data-tab="login">Login</button>
+        <button class="tab" data-tab="register">Register</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <h1>Welcome Back</h1>
+        <label>
+          Email
+          <input type="email" id="loginEmail" placeholder="you@email.com" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="loginPassword" placeholder="********" required />
+        </label>
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden">
+        <h1>Create Account</h1>
+        <label>
+          Full Name
+          <input type="text" id="registerName" placeholder="Jane Doe" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="registerEmail" placeholder="you@email.com" required />
+        </label>
+        <label>
+          WhatsApp Number
+          <input type="tel" id="registerPhone" placeholder="+234..." />
+        </label>
+        <label>
+          Password
+          <input type="password" id="registerPassword" placeholder="********" required />
+        </label>
+        <button class="btn" type="submit">Create Account</button>
+      </form>
+
+      <p class="auth-note">Use the same login when placing orders from the menu page.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -4,33 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taste Heaven | Booking</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/nav.js"></script>
   <script defer src="script.js"></script>
 </head>
-<body>
+<body class="page-booking">
   <header class="navbar">
-    <h1 class="logo">Taste Heaven</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html" class="active">Booking</a></li>
-      </ul>
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="login.html">Login</a>
     </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
   </header>
 
-  <section class="booking">
-    <h2>Book a Table</h2>
-    <form id="bookingForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="number" id="people" placeholder="No. of People" required>
-      <input type="datetime-local" id="date" required>
-      <textarea id="message" placeholder="Special Request"></textarea>
-      <button type="submit" class="btn">Send Booking</button>
-    </form>
-  </section>
+  <main class="booking-page">
+    <section class="booking-hero">
+      <div class="booking-hero-inner">
+        <p class="eyebrow">Reservations</p>
+        <h1>Reserve Your Table</h1>
+        <p class="lead">Secure your spot for a memorable dining experience. We will confirm quickly via WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn-outline" href="gallery.html">Explore Gallery</a>
+          <a class="btn" href="menu.html">View Menu</a>
+        </div>
+      </div>
+      <div class="booking-card">
+        <div class="booking-card-header">
+          <h2>Book a Table</h2>
+          <p>Tell us a few details and we will handle the rest.</p>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <div class="form-row">
+            <label>
+              Full Name
+              <input type="text" id="name" placeholder="Jane Doe" required>
+            </label>
+            <label>
+              Email Address
+              <input type="email" id="email" placeholder="jane@email.com" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Party Size
+              <input type="number" id="people" placeholder="2" min="1" required>
+            </label>
+            <label>
+              Date & Time
+              <input type="datetime-local" id="date" required>
+            </label>
+          </div>
+          <label class="full">
+            Special Request
+            <textarea id="message" placeholder="Birthday, dietary notes, seating preferences"></textarea>
+          </label>
+          <button type="submit" class="btn">Send Booking</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="booking-details">
+      <div class="detail-card">
+        <h3>Opening Hours</h3>
+        <p>Mon - Thu: 11:00 AM - 10:00 PM</p>
+        <p>Fri - Sun: 11:00 AM - 12:00 AM</p>
+      </div>
+      <div class="detail-card">
+        <h3>Private Dining</h3>
+        <p>Celebrate events with curated menus and dedicated service.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Contact</h3>
+        <p>Call or WhatsApp for quick confirmation.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

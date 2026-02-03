@@ -12,6 +12,14 @@ body {
   scroll-behavior: smooth;
 }
 
+marquee.marquee {
+  background-color: #f4b400;
+  color: #fffefe;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -69,7 +77,7 @@ img {
   color: #fff;
 }
 
-@media (max-width: px) {
+@media (max-width: 900px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -357,3 +365,122 @@ footer {
   color: #aaa;
   border-top: 1px solid #222;
 }
+
+
+/* ====== GALLERY PAGE STYLES ====== */
+.nav-links { display: flex; align-items: center; gap: 18px; }
+.page-gallery { background: #0f0f0f; }
+.gallery-page { padding-top: 110px; }
+.gallery-hero { min-height: 60vh; display: flex; align-items: center; padding: 60px 10%; background: linear-gradient(120deg, rgba(0,0,0,0.85), rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?restaurant,interior') center/cover no-repeat; }
+.gallery-hero-inner { max-width: 700px; text-align: left; }
+.gallery-hero .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; color: #f4b400; margin-bottom: 12px; }
+.gallery-hero h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 15px; }
+.gallery-hero .lead { color: #d5d5d5; line-height: 1.7; margin-bottom: 25px; }
+.hero-actions { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+.hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
+.hero-stats .stat { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.08); padding: 12px 16px; border-radius: 12px; }
+.hero-stats .stat span { display: block; font-size: 1.4rem; font-weight: 700; color: #f4b400; margin-bottom: 6px; }
+.hero-stats .stat small { color: #c9c9c9; }
+.gallery-showcase { padding: 70px 10% 90px; }
+.gallery-showcase .section-header { max-width: 600px; margin: 0 auto 30px; }
+.gallery-showcase .section-header p { color: #bcbcbc; line-height: 1.6; }
+.gallery-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 35px; }
+.gallery-filters .filter { padding: 8px 18px; border-radius: 999px; border: 1px solid #2e2e2e; background: #1a1a1a; color: #ddd; cursor: pointer; transition: 0.3s ease; }
+.gallery-filters .filter.active, .gallery-filters .filter:hover { background: #f4b400; color: #111; border-color: #f4b400; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.gallery-card { background: #171717; border-radius: 16px; overflow: hidden; box-shadow: 0 14px 30px rgba(0,0,0,0.35); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.gallery-card img { height: 220px; object-fit: cover; border-radius: 0; }
+.gallery-card figcaption { padding: 18px; text-align: left; }
+.gallery-card h3 { color: #f4b400; font-size: 1.1rem; margin-bottom: 6px; }
+.gallery-card p { color: #c7c7c7; font-size: 0.95rem; line-height: 1.5; }
+.gallery-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.45); }
+.gallery-cta { padding: 70px 10%; background: linear-gradient(135deg, rgba(244,180,0,0.18), rgba(0,0,0,0.9)); border-top: 1px solid #222; }
+.gallery-cta .cta-inner { max-width: 650px; margin: 0 auto; text-align: center; }
+.gallery-cta p { color: #ccc; margin: 12px 0 25px; }
+@media (max-width: 900px) {
+  .gallery-hero { padding: 100px 7% 60px; }
+  .gallery-hero-inner { text-align: center; }
+  .hero-actions { justify-content: center; }
+}
+@media (max-width: 600px) {
+  .gallery-page { padding-top: 90px; }
+  .gallery-card img { height: 200px; }
+}
+
+/* ====== BOOKING PAGE STYLES ====== */
+.page-booking { background: #0f0f0f; }
+.booking-page { padding-top: 110px; }
+.booking-hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 60px 10% 40px;
+  background: linear-gradient(120deg, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url("https://source.unsplash.com/1600x900/?restaurant,table") center/cover no-repeat;
+}
+.booking-hero-inner { text-align: left; }
+.booking-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: #f4b400;
+  margin-bottom: 12px;
+}
+.booking-hero h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 15px; }
+.booking-hero .lead { color: #d5d5d5; line-height: 1.7; margin-bottom: 25px; }
+.booking-card {
+  background: rgba(20,20,20,0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+}
+.booking-card-header h2 { color: #f4b400; margin-bottom: 6px; }
+.booking-card-header p { color: #bdbdbd; margin-bottom: 20px; }
+.booking-form { display: flex; flex-direction: column; gap: 18px; }
+.booking-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.booking-form label { text-align: left; color: #e0e0e0; font-size: 0.95rem; display: grid; gap: 8px; }
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  background: #141414;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.booking-form textarea { min-height: 120px; resize: vertical; }
+.booking-form .full { grid-column: 1 / -1; }
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 10% 90px;
+  background: #111;
+}
+.detail-card {
+  background: #171717;
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.05);
+  text-align: left;
+}
+.detail-card h3 { color: #f4b400; margin-bottom: 10px; }
+.detail-card p { color: #c9c9c9; line-height: 1.6; }
+@media (max-width: 900px) {
+  .booking-hero { padding: 100px 7% 40px; }
+  .booking-hero-inner { text-align: center; }
+  .booking-hero .hero-actions { justify-content: center; }
+}
+@media (max-width: 600px) {
+  .booking-page { padding-top: 90px; }
+}
+
+
+.menu-toggle { background: transparent; border: none; }
+

@@ -4,32 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taste Heaven | Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/nav.js"></script>
 </head>
-<body>
+<body class="page-gallery">
   <header class="navbar">
-    <h1 class="logo">Taste Heaven</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="booking.html">Booking</a></li>
-      </ul>
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="login.html">Login</a>
     </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
   </header>
 
-  <section class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://source.unsplash.com/400x300/?food" alt="">
-      <img src="https://source.unsplash.com/400x300/?restaurant" alt="">
-      <img src="https://source.unsplash.com/400x300/?dessert" alt="">
-      <img src="https://source.unsplash.com/400x300/?drinks" alt="">
-      <img src="https://source.unsplash.com/400x300/?chef" alt="">
-      <img src="https://source.unsplash.com/400x300/?steak" alt="">
-    </div>
-  </section>
+  <main class="gallery-page">
+    <section class="gallery-hero">
+      <div class="gallery-hero-inner">
+        <p class="eyebrow">Taste Heaven Gallery</p>
+        <h1>Moments Worth Savoring</h1>
+        <p class="lead">A curated look at our dining room, chef craft, and signature plates.</p>
+        <div class="hero-actions">
+          <a class="btn" href="booking.html">Reserve a Table</a>
+          <a class="btn-outline" href="menu.html">View Menu</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span>150+</span>
+            <small>Dishes Served Daily</small>
+          </div>
+          <div class="stat">
+            <span>4.9</span>
+            <small>Guest Rating</small>
+          </div>
+          <div class="stat">
+            <span>12</span>
+            <small>Signature Experiences</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-showcase">
+      <div class="section-header">
+        <h2>Signature Moments</h2>
+        <p>From plated artistry to warm ambience, here is what makes Taste Heaven unforgettable.</p>
+      </div>
+
+      <div class="gallery-filters">
+        <button class="filter active" type="button">All</button>
+        <button class="filter" type="button">Dining Room</button>
+        <button class="filter" type="button">Kitchen</button>
+        <button class="filter" type="button">Desserts</button>
+        <button class="filter" type="button">Events</button>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?restaurant,dining" alt="Elegant dining room setup">
+          <figcaption>
+            <h3>Golden Hour Dining</h3>
+            <p>Soft lighting, crisp linens, and a welcoming table.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?chef,kitchen" alt="Chef preparing a dish in the kitchen">
+          <figcaption>
+            <h3>Chef At Work</h3>
+            <p>Precision, passion, and a touch of flair.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?gourmet,plating" alt="Gourmet dish with artistic plating">
+          <figcaption>
+            <h3>Signature Plates</h3>
+            <p>Seasonal ingredients plated with intention.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?dessert" alt="Dessert with chocolate and berries">
+          <figcaption>
+            <h3>Sweet Finishes</h3>
+            <p>House-made desserts to end on a high note.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?cocktail" alt="Craft cocktail with citrus garnish">
+          <figcaption>
+            <h3>Crafted Cocktails</h3>
+            <p>Balanced, bold, and beautifully presented.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?restaurant,event" alt="Restaurant event table setting">
+          <figcaption>
+            <h3>Private Events</h3>
+            <p>Tailored experiences for every celebration.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?steak" alt="Grilled steak with sides">
+          <figcaption>
+            <h3>Chef Specials</h3>
+            <p>Slow-cooked flavors and bold seasoning.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?bread,bakery" alt="Fresh bread on a rustic table">
+          <figcaption>
+            <h3>Freshly Baked</h3>
+            <p>Warm bread and pastries from our kitchen.</p>
+          </figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://source.unsplash.com/800x600/?coffee" alt="Coffee service on a table">
+          <figcaption>
+            <h3>After Dinner Rituals</h3>
+            <p>Slow moments with coffee and conversation.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gallery-cta">
+      <div class="cta-inner">
+        <h2>Experience It In Person</h2>
+        <p>Book your next dining moment and let us take care of the rest.</p>
+        <a class="btn" href="booking.html">Make a Reservation</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

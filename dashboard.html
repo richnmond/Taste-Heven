@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taste Heaven | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/dashboard.js"></script>
+</head>
+<body class="page-dashboard">
+  <header class="navbar">
+    <div class="logo">Taste Heaven</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+  </header>
+
+  <main class="dashboard-page">
+    <section class="dashboard-hero">
+      <div>
+        <p class="eyebrow">Your Account</p>
+        <h1>Order Dashboard</h1>
+        <p class="lead">Track approval status and manage your recent orders.</p>
+      </div>
+      <div class="dashboard-actions">
+        <button class="btn-outline" id="refreshDashboard">Refresh</button>
+        <button class="btn" id="logoutUser">Logout</button>
+      </div>
+    </section>
+
+    <section class="order-history">
+      <h2>Recent Orders</h2>
+      <div id="dashboardOrders" class="order-list"></div>
+    </section>
+  </main>
+</body>
+</html>
