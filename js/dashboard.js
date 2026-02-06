@@ -18,7 +18,7 @@ const userInfo = () => {
     return {};
   }
 };
-
+    
 const requireLogin = () => {
   if (!authToken()) {
     alert('Please login to view your dashboard.');
