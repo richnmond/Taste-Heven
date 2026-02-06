@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taste Heaven | Menu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">Taste<span>Heaven</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div id="cartBtn" class="cart">🛒 <span id="cartCount">0</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+  </header>
+
+  <!-- ===== MENU SECTION ===== -->
+  <section class="menu-page">
+    <h1>Our <span>Menu</span></h1>
+    <p class="intro-text">Explore our delicious selection — prepared with love and served fresh.</p>
+
+    <!-- Starters -->
+    <div class="menu-category">
+      <h2>Starters</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/starter1.jpg" alt="Spring Rolls" />
+          <div class="menu-info">
+            <h3>Spring Rolls</h3>
+            <p>Crispy rolls filled with fresh vegetables & served with spicy dip.</p>
+            <span>₦2,500</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Spring Rolls" data-price="2500">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/soup.jpg" alt="Hot Pepper Soup" />
+          <div class="menu-info">
+            <h3>Hot Pepper Soup</h3>
+            <p>Traditional spicy soup with meat or fish.</p>
+            <span>₦3,000</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Hot Pepper Soup" data-price="3000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dishes -->
+    <div class="menu-category">
+      <h2>Main Dishes</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/grilled-chicken.jpg" alt="Grilled Chicken" />
+          <div class="menu-info">
+            <h3>Grilled Chicken</h3>
+            <p>Juicy chicken marinated in herbs & grilled to perfection.</p>
+            <span>₦5,500</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Grilled Chicken" data-price="5500">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/jollof.jpg" alt="Jollof Rice Special" />
+          <div class="menu-info">
+            <h3>Jollof Rice Special</h3>
+            <p>Flavored rice with fried plantain & grilled chicken.</p>
+            <span>₦4,800</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Jollof Rice" data-price="4800">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-category">
+      <h2>Drinks</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/smoothie.jpg" alt="Fruit Smoothie" />
+          <div class="menu-info">
+            <h3>Fruit Smoothie</h3>
+            <p>Blended seasonal fruits served chilled.</p>
+            <span>₦2,000</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Fruit Smoothie" data-price="2000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/cocktail.jpg" alt="Classic Cocktail" />
+          <div class="menu-info">
+            <h3>Classic Cocktail</h3>
+            <p>Refreshing mixed drink with tropical flavors.</p>
+            <span>₦3,200</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Classic Cocktail" data-price="3200">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-category">
+      <h2>Desserts</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/icecream.jpg" alt="Vanilla Ice Cream" />
+          <div class="menu-info">
+            <h3>Vanilla Ice Cream</h3>
+            <p>Soft & creamy vanilla ice cream topped with chocolate syrup.</p>
+            <span>₦2,200</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Vanilla Ice Cream" data-price="2200">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="images/cake.jpg" alt="Chocolate Cake" />
+          <div class="menu-info">
+            <h3>Chocolate Cake</h3>
+            <p>Rich and moist chocolate cake served warm.</p>
+            <span>₦3,000</span>
+            <div class="buy">
+              <button class="add-to-cart" data-name="Chocolate Cake" data-price="3000">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Taste Heaven. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== CART MODAL ===== -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <button id="closeCart" class="close-btn">×</button>
+      <h2>Your Cart</h2>
+      <ul id="cartItems" class="cart-items"></ul>
+      <div class="cart-summary">
+        <strong>Total: </strong><span id="cartTotal">₦0</span>
+      </div>
+      <div class="cart-actions">
+        <button id="clearCart">Clear Cart</button>
+        <button id="checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

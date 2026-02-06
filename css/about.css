@@ -1,0 +1,143 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+body {
+  background: #111;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* ===== MAIN CONTENT ===== */
+.about-container {
+  padding: 120px 8% 80px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.about-content {
+  flex: 1 1 400px;
+}
+
+.about-content h1 {
+  font-size: 2.2rem;
+  color: #f4b400;
+  margin-bottom: 20px;
+}
+
+.about-content h1 span {
+  color: #fff;
+}
+
+.about-content p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== MISSION & VISION ===== */
+.mission {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mission h2 {
+  color: #f4b400;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.mission-box {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.mission-box:hover {
+  transform: translateY(-5px);
+}
+
+.mission-box h3 {
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+/* ===== TEAM SECTION ===== */
+.team {
+  text-align: center;
+}
+
+.team h2 {
+  color: #f4b400;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.team-card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-card h3 {
+  color: #f4b400;
+  margin: 10px 0 5px;
+}
+
+.team-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 100px 6% 60px;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+}
