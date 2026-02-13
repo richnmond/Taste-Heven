@@ -86,7 +86,32 @@ img {
   border: 1px solid rgba(255,255,255,0.15);
   background: rgba(20,20,20,0.8);
   place-items: center;
+  gap: 5px;
+  padding: 10px;
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.2s ease, background 0.25s ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: #f4b400;
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: #f4b400;
 }
 
 .menu-toggle:hover {
@@ -104,17 +129,18 @@ img {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 78px;
-    right: 12px;
-    left: 12px;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
     background: rgba(12,12,12,0.95);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 18px;
-    text-align: center;
-    padding: 18px 16px;
+    border-radius: 18px 0 0 18px;
+    text-align: left;
+    padding: 90px 18px 24px;
     gap: 10px;
     opacity: 0;
-    transform: translateY(-12px) scale(0.98);
+    transform: translateX(24px);
     pointer-events: none;
     box-shadow: 0 18px 40px rgba(0,0,0,0.45);
     backdrop-filter: blur(8px);
@@ -123,17 +149,17 @@ img {
 
   .nav-links.active {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateX(0);
     pointer-events: auto;
   }
 
   .nav-links a {
     margin: 0;
-    padding: 10px 12px;
+    padding: 12px 14px;
     border-radius: 10px;
     background: rgba(255,255,255,0.02);
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateX(10px);
   }
 
   .menu-toggle {
@@ -142,7 +168,7 @@ img {
 
   .nav-links.active a {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .nav-links.active a:nth-child(1) { transition-delay: 0.05s; }

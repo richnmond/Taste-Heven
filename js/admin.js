@@ -1,4 +1,4 @@
-const API_BASE = (() => {
+const API_BASE = window.API_BASE || (() => {
   if (window.location.protocol === 'file:') return 'http://localhost:4000/api';
   const host = window.location.hostname || 'localhost';
   return `http://${host}:4000/api`;

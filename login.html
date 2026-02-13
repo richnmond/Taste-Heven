@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
   <script defer src="js/nav.js"></script>
+  <script defer src="js/config.js"></script>
   <script defer src="js/auth.js"></script>
 </head>
 <body class="page-auth">
@@ -19,7 +20,11 @@
       <a href="booking.html">Booking</a>
       <a href="login.html" class="active">Login</a>
     </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">&#9776;</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <main class="auth-page">
@@ -46,8 +51,8 @@
         <h1>Create Account</h1>
         <label>
           Full Name
-          <input type="text" id="registerName" placeholder="Jane Doe" required />
-        </label>
+          <input type="text" id="registerName" placeholder="Enter your full name" required />
+        </label>  
         <label>
           Email
           <input type="email" id="registerEmail" placeholder="you@email.com" required />
